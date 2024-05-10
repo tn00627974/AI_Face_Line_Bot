@@ -244,6 +244,34 @@ def load_js2(data):
     
     return js
 
+# 顯示商品資訊
+def load_js3(product_data,skin_os,age_os): 
+    age_type = f"{skin_os}{age_os}"
+    result = select_2(product_data[0], age_type)
+    skin_dict = {
+        "A": "乾性肌膚",
+        "B": "油性肌膚",
+        "C": "敏感性肌膚",
+        "D": "混合性肌膚",
+    }
+    age_dict = {
+        "1": "20歲以下",
+        "2": "21-30歲",
+        "3": "31-45歲",
+        "4": "46歲以上",
+    }
+
+    with open("v3.json", mode="r", encoding="utf-8") as fi:
+        js = json.load(fi)
+
+    js["body"]["contents"][1]["text"] = product_data[1]  # 商品名稱
+    js["body"]["contents"][3]["contents"][0]["contents"][1]["text"] = skin_dict[skin_os]  # 皮膚屬性
+    js["body"]["contents"][3]["contents"][1]["contents"][1]["text"] = age_dict[age_os]  # 年紀範圍
+    js["body"]["contents"][3]["contents"][3]["contents"][1]["text"] = (str(result[0]) if result[0] != None else "無使用者分享")  # 分數
+    js["body"]["contents"][3]["contents"][4]["contents"][1]["text"] = (result[1] if result[1] != None else "無使用者分享")  # 效果
+
+    return js
+
 # 推薦商品
 def push_db(id_tp):
     conn = pymysql.connect(host=host, port=port, user=user, passwd=passwd, db=db, charset=charset)
