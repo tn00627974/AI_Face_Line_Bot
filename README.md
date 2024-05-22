@@ -1,3 +1,8 @@
+
+
+<img src="https://github.com/tn00627974/Ai_Face_Linebot/assets/139155210/92b450af-16b7-488d-adfb-56bb3a5e5323" width="200"></h1> 
+
+
 # 洗面乳識別系統
 本項目是一個基於LINE Bot開發的洗面乳推薦系統，使用了Keras的MobileNetV2進行遷移式訓練，並結合了爬蟲和自然語言處理（NLP）技術來分析和獲取網絡上的相關產品評價。整個服務部署在Google Cloud Run上。
 
@@ -59,6 +64,9 @@ https://youtu.be/IO_8H76po74
 ## 使用說明
 此辨識系統目前共有四個功能：  
 
+
+<img src="https://github.com/tn00627974/Ai_Face_Linebot/assets/139155210/f6f6b59c-ffb2-4411-b410-bc69a0c40770" width="500"></h1> 
+
 **1. 拍照辨識**：可拍照洗面乳照片，系統會回傳該洗面乳相關的網路評價分數，優缺點以及相關推薦產品給您。  
 **2. 選擇膚質**：使用者可輸入自己的年齡及膚質等資訊，尋找最適合自己的洗面乳及相關推薦產品。  
 **3. 收錄品項**: 可查看我們目前有收錄的洗面乳品項  
@@ -66,7 +74,8 @@ https://youtu.be/IO_8H76po74
 
 
 # 版本更新及維護
-**版本紀錄** : main_v6版本 
+**版本紀錄** : main_v6版本 (20240509)
+- 新增詳細註解內容，使程式碼更好被閱讀
 - 更動Flex massge圖像大小 從full > 3xl , 回傳模板時圖像不會過大等問題
 - 優化主程式碼雜亂問題,更新原有的code重新移至select_tool_v2建立funtion(load_js3)
 
