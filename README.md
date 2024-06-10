@@ -88,4 +88,5 @@ https://youtu.be/IO_8H76po74
 感謝所有使用和支持本項目的人。
 特別感謝所有對項目代碼做出貢獻的開發者。
 
+專案PTT預覽 :
 https://gamma.app/docs/-nrxnrc44lavx17z?mode=doc
